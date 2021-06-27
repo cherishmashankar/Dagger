@@ -1,12 +1,17 @@
 package com.example.android.dagger.network.auth;
 
-import okhttp3.ResponseBody;
-import retrofit2.Call;
+import com.example.android.dagger.models.Users;
+
+import io.reactivex.Flowable;
+
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface AuthApi {
 
-    @GET("fake")
-    Call<ResponseBody> getFakeStuff();
+    @GET("users/{id}")
+    Flowable<Users> getUser(
+      @Path("id") int id
+    );
 
 }
