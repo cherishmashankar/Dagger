@@ -1,4 +1,4 @@
-package com.example.android.dagger.di.auth;
+package com.example.android.dagger.di.main;
 
 import androidx.lifecycle.ViewModel;
 
@@ -11,10 +11,10 @@ import dagger.Module;
 import dagger.multibindings.IntoMap;
 
 @Module
-public abstract class AuthViewModelsModule {
+public abstract class MainViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey( AuthViewModel.class)
-    public abstract ViewModel bindAuthViewModel( AuthViewModel viewModel);
+    @ViewModelKey(ProfileViewModel.class)
+    public abstract ViewModel bindProfileViewModel(ProfileViewModel viewModel);
 }
