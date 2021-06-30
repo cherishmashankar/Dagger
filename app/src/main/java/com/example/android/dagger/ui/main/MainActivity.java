@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.android.dagger.BaseActivity;
 import com.example.android.dagger.R;
+import com.example.android.dagger.ui.main.post.PostsFragment;
 import com.example.android.dagger.ui.main.profile.ProfileFragment;
 
 public class MainActivity extends BaseActivity {
@@ -42,7 +43,7 @@ public class MainActivity extends BaseActivity {
 
     private void testFragment(){
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main, new ProfileFragment())
+                .replace(R.id.main, new PostsFragment())
                 .commit();
     }
 }
