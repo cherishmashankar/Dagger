@@ -1,6 +1,7 @@
 package com.example.android.dagger.di.main;
 
 import com.example.android.dagger.network.main.MainApi;
+import com.example.android.dagger.ui.main.post.PostsRecyclerAdapter;
 
 import dagger.Module;
 import dagger.Provides;
@@ -12,5 +13,10 @@ public class MainModule {
     @Provides
     static MainApi provideMAinApi(Retrofit retrofit){
         return retrofit.create(MainApi.class);
+    }
+
+    @Provides
+    static PostsRecyclerAdapter provideAdapter(){
+        return new PostsRecyclerAdapter();
     }
 }
